@@ -55,6 +55,6 @@ Several methods were implemented for the library management system, including:
 Additionally, a `ServicioImplActivador` class was implemented for bundle activation and service registration.
 
 ## Video Explanation
-A video explaining the bundle loading process and the use of the library to add and search for books is attached.
+A video explaining the bundle loading process and the use of the library to add and search for books:
 
 
