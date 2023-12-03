@@ -52,7 +52,12 @@ Several methods were implemented for the library management system, including:
 6. `buscarLibrosPorAutor`
 7. `buscarLibrosPorTitulo`
 
-Additionally, a `ServicioImplActivador` class was implemented for bundle activation and service registration.
+`ServicioImplActivador` class was implemented for bundle activation and service registration:
+
+1. `start`
+2. `stop`
+
+Additionally, a the constructors for `ExcepcionCredencialInvalida` class and `ExcepcionSesionNoValidaTiempoEjecucion` were implemented.
 
 ## Video Explanation
 A video explaining the bundle loading process and the use of the library to add and search for books:
