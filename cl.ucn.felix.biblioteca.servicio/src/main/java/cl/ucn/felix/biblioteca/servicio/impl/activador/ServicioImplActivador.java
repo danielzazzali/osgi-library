@@ -5,21 +5,29 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
 
 import cl.ucn.felix.biblioteca.servicio.api.ServicioInventarioLibro;
+import cl.ucn.felix.biblioteca.servicio.api.ServicioInventarioLibroImpl;
 
 public class ServicioImplActivador  implements BundleActivator {
 
 	ServiceRegistration<ServicioInventarioLibro> reg = null;
-	
+
 	@Override
 	public void start(BundleContext context) throws Exception {
-		// TODO Auto-generated method stub
-		
+		// Crear una instancia del servicio ServicioInventarioLibro
+		ServicioInventarioLibro servicioInventarioLibro = new ServicioInventarioLibroImpl(context);
+
+		// Registrar el servicio en el contexto del bundle
+		reg = context.registerService(ServicioInventarioLibro.class, servicioInventarioLibro, null);
+
 	}
 
 	@Override
 	public void stop(BundleContext context) throws Exception {
-		// TODO Auto-generated method stub
-		
+		// Cancelar el registro del servicio si está registrado
+		if (reg != null) {
+			reg.unregister();
+			reg = null;
+		}
 	}
 
 }

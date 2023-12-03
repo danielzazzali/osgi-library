@@ -33,8 +33,8 @@ public class ServicioInventarioProxy {
 			@Descriptor("username") String username,
 			@Descriptor("password") String password,
 			@Descriptor("busqueda en atributos: autor, titulo, o categoria") String atributo,
-			@Descriptor("match like (usar % al principio o final de <like>"+ " para uso de wild-card)") String filter) 
-					throws ExcepcionCredencialInvalida
+			@Descriptor("match like (usar % al principio o final de <like>"+ " para uso de wild-card)") String filter)
+			throws ExcepcionCredencialInvalida, ExcepcionSesionNoValidaTiempoEjecucion
 	{
 
 		ServicioInventarioLibro servicio = buscarLibroEnInventario();
@@ -102,18 +102,18 @@ public class ServicioInventarioProxy {
 
 	@Descriptor("Adicionar libros")
 	public String adicionar(@Descriptor("username") String username,
-			@Descriptor("password") String password,
-			@Descriptor("ISBN") String isbn,
-			@Descriptor("Titulo") String titulo,
-			@Descriptor("Autor") String autor,
-			@Descriptor("Categoria") String categoria)
-					throws ExcepcionCredencialInvalida,
-					ExcepcionLibroExistente, ExcepcionLibroInvalido
+							@Descriptor("password") String password,
+							@Descriptor("ISBN") String isbn,
+							@Descriptor("Titulo") String titulo,
+							@Descriptor("Autor") String autor,
+							@Descriptor("Categoria") String categoria)
+			throws ExcepcionCredencialInvalida,
+			ExcepcionLibroExistente, ExcepcionLibroInvalido, ExcepcionSesionNoValidaTiempoEjecucion
 	{
 		ServicioInventarioLibro servicio = buscarLibroEnInventario();
 		String sesion = servicio.login(username, password);
 		servicio.adicionarLibro(sesion, isbn, titulo, autor, categoria);
 		return isbn;
 	}
-	
+
 }
