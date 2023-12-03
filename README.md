@@ -25,7 +25,7 @@ In the Felix console, the following steps were executed for bundle management:
    resolve ID1 ID2 ID3 ID4
    start ID1 ID2 ID3 ID4
    ```
-![Bundles instalados y activos](lb.png)
+   ![Bundles instalados y activos](lb.png)
 
    
 3. Usage of library functions:
@@ -60,7 +60,7 @@ Several methods were implemented for the library management system, including:
 1. `start`
 2. `stop`
 
-Additionally, a the constructors for `ExcepcionCredencialInvalida` class and `ExcepcionSesionNoValidaTiempoEjecucion` were implemented.
+Additionally, the constructors for `ExcepcionCredencialInvalida` class and `ExcepcionSesionNoValidaTiempoEjecucion` were implemented.
 
 ## Video Explanation
 A video explaining the bundle loading process and the use of the library to add and search for books:
