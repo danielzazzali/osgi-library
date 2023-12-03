@@ -25,6 +25,9 @@ In the Felix console, the following steps were executed for bundle management:
    resolve ID1 ID2 ID3 ID4
    start ID1 ID2 ID3 ID4
    ```
+![Descripción de la imagen](lb.png)
+
+   
 3. Usage of library functions:
    - To add books:
      ```
