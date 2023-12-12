@@ -1,3 +1,8 @@
+Autors:
+Valentina Henriquez
+Sebastian Fuentes
+Daniel Zazzali
+
 # Apache Felix Library Management Project Documentation
 
 ## Project Overview
